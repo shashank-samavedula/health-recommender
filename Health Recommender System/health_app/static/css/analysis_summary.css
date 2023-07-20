@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+   overflow:auto;
+}
+
+.wrapper{
+  display: inline-flex;
+  position: relative;
+  gap: 0px;
+  overflow:auto;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: auto;
+  background: #333 ;
+  padding: 30px 0px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 0px;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+}    
+
+.wrapper .sidebar ul li a{
+  color: #f2f2f2;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #ddd;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: black;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 0px;
+  overflow:auto
+}
+
+.wrapper .main_content .info{
+  margin-top: 75px;
+  margin-left: 310px;
+  color: #717171;
+  line-height: 25px;
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;  
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.wrapper .sidebar ul li a.active {
+  background-color: #04AA6D;
+  color: white;  
+}
+
+.wrapper .main_content .info .img{
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;      
+}
+
+.wrapper .main_content .info .table{
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;  
+}
+
+.wrapper .main_content .info .table table{
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper .main_content .info .table table tr{
+  border: 1px solid black;
+}
+
+.wrapper .main_content .info .table table tr th{
+  border: 1px solid black;
+  background-color: #04AA6D !important;
+}
+
+.wrapper .main_content .info .table table tr td{ 
+  border: 1px solid black;   
+  background-color: #f3f5f9 !important;
+}

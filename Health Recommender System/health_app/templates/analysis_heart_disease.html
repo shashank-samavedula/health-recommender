@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Analysis</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/analysis.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/analysis_summary.css') }}">
+    </head>
+    <body>
+        {% block top_nav_bar %}
+        
+        <div class="topnav">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a class="active" href="{{ url_for('analysis_summary') }}">Analysis</a>
+            <a href="{{ url_for('patient_details') }}">Patient Details</a>
+            <a href="{{ url_for('diagnose_patient') }}">Diagnose Patient</a>
+            <a href="{{ url_for('logout') }}"    style="float: right;
+                                                        color: #f2f2f2;
+                                                        text-align: center;
+                                                        padding: 14px 16px;
+                                                        text-decoration: none;
+                                                        font-size: 17px;">Logout</a>
+        </div>
+        
+        {% endblock %}
+
+        {% block side_nav_bar %}
+
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="{{ url_for('analysis_summary') }}">Summary</a></li>
+                    <li><a href="{{ url_for('analysis_malaria') }}">Malaria</a></li>
+                    <li><a href="{{ url_for('analysis_pneumonia') }}">Pneumonia</a></li>
+                    <li><a href="{{ url_for('analysis_depression') }}">Depression</a></li>
+                    <li><a href="{{ url_for('analysis_covid') }}">COVID</a></li>
+                    <li><a href="{{ url_for('analysis_diabetes') }}">Diabetes</a></li>
+                    <li><a href="{{ url_for('analysis_heart_disease') }}" class="active">Heart Disease</a></li>
+                </ul>
+            </div>
+            <div class="main_content">  
+                <div class="info">
+                <div class="img">
+                <img src="{{ url_for( 'static', filename=img ) }}" alt="Not Found">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

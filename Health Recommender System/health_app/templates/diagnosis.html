@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/patient_detailed.css')}}">
+    </head>
+    <body>
+        <p>Diagnosis of Patient</p>
+        {% for key,value in results.items() %}
+        <div>
+            <h2>{{key}}</h2><br>
+            <h4>{{value}}</h4>
+        </div>
+        {% endfor %}
+    </body>
+</html>

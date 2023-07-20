@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/patient_detailed.css')}}">
+    </head>
+    <body>
+        <p>Detailed Information</p>
+        <div>
+            <div>
+                <h2>ID</h2>
+                <h4>{{data.id}}</h4>
+            </div>
+            <div>
+                <h2>Age</h2>
+                <h4>{{data.age}}</h4>
+            </div>
+            <div>
+                <h2>Gender</h2>
+                {% if data.gender == '0' %}
+                <h4>M</h4>
+                {% else %}
+                <h4>F</h4>
+                {% endif %}
+            </div>
+            <div>
+                <h2>Insulin (μIU/mL)</h2>
+                <h4>{{data.insulin}}</h4>
+            </div>
+            <div>
+                <h2>Cholestrol (mg/dL)</h2>
+                <h4>{{data.cholestrol}}</h4>
+            </div>
+            <div>
+                <h2>BP (mmHg)</h2>
+                <h4>{{data.bp}}</h4>
+            </div>
+            <div>
+                <h2>Glucose (mg/dL)</h2>
+                <h4>{{data.glucose}}</h4>
+            </div>
+            <div>
+                <h2>Blood Smear Specimen</h2>
+                <img src="{{url_for('download', filename='malaria/'+data.malariadata)}}" alt="Not Found">
+            </div>
+            <div>
+                <h2>isMalaria</h2>
+                <h4>{{data.isMalaria}}</h4>
+            </div>
+            <div>
+             <h2>CT Scan</h2>
+            <img src="{{url_for('download', filename='covid/'+data.coviddata)}}" alt="Not Found">
+            </div>
+            <div>
+                <h2>isCovid</h2>
+                <h4>{{data.isCovid}}</h4>
+            </div>
+            <div>
+                <h2>isPneumonia</h2>
+                <h4>{{data.isPneuomonoa}}</h4>
+            </div>
+            <div>
+                 <h2>Actigraph</h2>
+                <a href="{{url_for('download', filename='mentalhealth/'+data.mentalhealthdata)}}">Click to Download CSV file</a>
+            </div>
+            <div>
+                <h2>isDepression</h2>
+                <h4>{{data.isDepression}}</h4>
+            </div>
+            <div>
+                <h2>isDiabetes</h2>
+                <h4>{{data.isDiabetes}}</h4>
+            </div>
+            <div>
+                <h2>isHeartDisease</h2>
+                <h4>{{data.isHeartDisease}}</h4>
+            </div>
+            <div>
+                <h2>Chest Pain Type</h2>
+                <h4>{{data.chestpaintype}}</h4>
+            </div>
+            <div>
+                <h2>Thalium</h2>
+                <h4>{{data.thalium}}</h4>
+            </div>
+            <div>
+                <h2>FBS (mg/dL)</h2>
+                <h4>{{data.fbs}}</h4>
+            </div>
+            <div>
+                <h2>BMI</h2>
+                <h4>{{data.bmi}}</h4>
+            </div>
+            <div>
+                <h2>EKG results</h2>
+                <h4>{{data.ekg}}</h4>
+            </div>
+            <div>
+                <h2>Exercise angina</h2>
+                <h4>{{data.enigma}}</h4>
+            </div>
+            <div>
+                <h2>ST depression</h2>
+                <h4>{{data.stdp}}</h4>
+            </div>
+            <div>
+                <h2>No of pregencies</h2>
+                <h4>{{data.pregencies}}</h4>
+            </div>
+            <div>
+                <h2>Max Heart Rate (bpm)</h2>
+                <h4>{{data.maxhr}}</h4>
+            </div>
+            <div>
+                <h2>Skin THickness (mm)</h2>
+                <h4>{{data.skinthickness}}</h4>
+            </div>
+            <div>
+                <h2>Diabetes %</h2>
+                <h4>{{data.diabetesp}}</h4>
+            </div>
+            <div>
+                <h2>Slope</h2>
+                <h4>{{data.slope}}</h4>
+            </div>
+            <div>
+                <h2>Vessels</h2>
+                <h4>{{data.vessels}}</h4>
+            </div>                                                                                                                                                                        
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

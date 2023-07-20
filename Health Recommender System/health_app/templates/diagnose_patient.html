@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Diagnose Patient</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/diagnose_patient.css') }}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/diagnose_patient_form.css')}}">
+    </head>
+    <body>
+        {% block top_nav_bar %}
+        
+        <div class="topnav">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('analysis_summary') }}">Analysis</a>
+            <a href="{{ url_for('patient_details') }}">Patient Details</a>
+            <a class="active" href="{{ url_for('diagnose_patient') }}">Diagnose Patient</a>
+            <a href="{{ url_for('logout') }}"    style="float: right;
+                                                        color: #f2f2f2;
+                                                        text-align: center;
+                                                        padding: 14px 16px;
+                                                        text-decoration: none;
+                                                        font-size: 17px;">Logout</a>
+        </div>
+        
+        {% endblock %}
+        {% block form %}
+        <h1>Please fill below details</h1>
+        <form method="post" enctype="multipart/form-data">
+            <p>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age">
+            </p>
+            <p>
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender">
+            </p>
+            <p>
+                <label for="bp">Blood pressure:</label>
+                <input type="text" id="bp" name="bp">
+            </p>  
+            <p>
+                <label for="cholestrol">Cholestrol:</label>
+                <input type="text" id="cholestrol" name="cholestrol">
+            </p>
+            <p>
+                <label for="glucose">Glucose:</label>
+                <input type="text" id="glucose" name="glucose">
+            </p>
+            </p>
+            <p>
+                <label for="insulin">Insulin:</label>
+                <input type="text" id="insulin" name="insulin">
+            </p>
+            <p>
+                <label for="maxhr">maxhr:</label>
+                <input type="text" id="maxhr" name="maxhr">
+            </p>
+            <p>
+                <label for="thalium">thalium:</label>
+                <input type="text" id="thalium" name="thalium">
+            </p>
+            <p>
+                <label for="fbs">fbs:</label>
+                <input type="text" id="fbs" name="fbs">
+            </p>
+            <p>
+                <label for="chestpaintype">chestpaintype:</label>
+                <input type="text" id="chestpaintype" name="chestpaintype">
+            </p>
+            <p>
+                <label for="bmi">bmi:</label>
+                <input type="text" id="bmi" name="bmi">
+            </p>
+          
+            <p>
+                <label for="skinthickness">skinthickness:</label>
+                <input type="text" id="skinthickness" name="skinthickness">
+            </p>
+          
+            <p>
+                <label for="diabetesp">diabetesp:</label>
+                <input type="text" id="diabetesp" name="diabetesp">
+            </p>
+           
+            <p>
+                <label for="vessels">vessels:</label>
+                <input type="text" id="vessels" name="vessels">
+            </p>
+            <p>
+                <label for="ekg">ekg:</label>
+                <input type="text" id="ekg" name="ekg">
+            </p>
+            <p>
+                <label for="enigma">enigma:</label>
+                <input type="text" id="enigma" name="enigma">
+            </p>
+            <p>
+                <label for="pregencies">pregencies:</label>
+                <input type="text" id="pregencies" name="pregencies">
+            </p>
+            <p>
+                <label for="stdp">stdp:</label>
+                <input type="text" id="stdp" name="stdp">
+            </p>
+         
+            <p>
+                <label for=" slope"> slope:</label>
+                <input type="text" id=" slope" name=" slope">
+            </p>
+          
+            <p>
+                <label for="file1">CT Scan:</label>
+                <input type="file" id="file1" name="file1">
+            </p>
+            <p>
+                <label for="file2">Blood Smear Specimen:</label>
+                <input type="file" id="file2" name="file2">
+            </p>
+            <p>
+                <label for="file3">Actigraph:</label>
+                <input type="file" id="file3" name="file3">
+            </p>
+         
+            <p><input type="submit" value="Upload"></p>
+
+        </form>
+        {% endblock %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
