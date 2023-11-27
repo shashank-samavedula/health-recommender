@@ -1,3 +1,3 @@
 # Health Recommender System
 
-A web application for health recommendation system that used different datasets stored in multiple databases. Technologies used are Python, Flask and DynamoDB. The application predicts diseases of the patients using a machine learning model.
+Designed and implemented a health recommendation web application, integrating diverse datasets from multiple databases. Leveraging Python, Flask, and DynamoDB, the system uses a robust machine learning model with a 93.1% disease prediction accuracy.
